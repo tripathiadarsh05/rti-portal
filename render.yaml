@@ -12,9 +12,11 @@ services:
         sync: false
       - key: JWT_SECRET
         generateValue: true
-      - key: OPENROUTER_API_KEY
+      - key: OPENAI_API_KEY
         sync: false
-      - key: OPENROUTER_MODEL
-        value: openai/gpt-4o-mini
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-small
       - key: NEXT_PUBLIC_APP_URL
         sync: false
