@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run RTI Portal (port 5901)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npx next dev --port 5901",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

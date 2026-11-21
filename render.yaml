@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: rti-ai-portal
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
