@@ -2,5 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base { body { @apply min-h-screen bg-[#F0F8FF] text-slate-800 antialiased; background-image: radial-gradient(circle at 8% 0%,rgba(110,231,183,.20),transparent 25rem),radial-gradient(circle at 92% 4%,rgba(186,230,253,.28),transparent 22rem); } button, a, input, textarea, select { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2; } }
-@layer components { .card { @apply rounded-3xl border border-white/80 bg-white/90 shadow-[0_12px_36px_-16px_rgba(27,32,93,.22)] backdrop-blur; } .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-200 active:scale-[.98]; } .btn-primary { @apply btn bg-gradient-to-r from-violet-600 to-indigo-600 text-white shadow-lg shadow-indigo-200 hover:-translate-y-0.5 hover:shadow-indigo-300; } .btn-secondary { @apply btn border border-slate-200 bg-white text-slate-700 shadow-sm hover:-translate-y-0.5 hover:border-violet-200 hover:bg-violet-50; } .field { @apply mt-1 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm transition placeholder:text-slate-400 focus:border-violet-400 focus:bg-white focus:ring-4 focus:ring-violet-100; } .label { @apply block text-sm font-semibold text-slate-700; } .glass { @apply border border-white/60 bg-white/70 backdrop-blur-xl; } .status { @apply rounded-full px-3 py-1 text-xs font-bold capitalize; } }
+@layer base {
+  body {
+    @apply min-h-screen bg-[#f7faf9] text-slate-800 antialiased;
+    background-image:
+      radial-gradient(circle at 8% 0%, rgba(16, 185, 129, 0.08), transparent 28rem),
+      radial-gradient(circle at 94% 8%, rgba(56, 189, 248, 0.08), transparent 24rem);
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2;
+  }
+
+  ::selection {
+    @apply bg-emerald-100 text-emerald-950;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-[0_16px_40px_-24px_rgba(15,23,42,0.28)];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-200 active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply btn bg-emerald-700 text-white shadow-lg shadow-emerald-900/15 hover:-translate-y-0.5 hover:bg-emerald-800 hover:shadow-emerald-900/25;
+  }
+
+  .btn-secondary {
+    @apply btn border border-slate-200 bg-white text-slate-700 shadow-sm hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50;
+  }
+
+  .field {
+    @apply mt-1 w-full rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-sm transition placeholder:text-slate-400 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-slate-700;
+  }
+
+  .glass {
+    @apply border border-white/60 bg-white/80 backdrop-blur-xl;
+  }
+
+  .status {
+    @apply rounded-full px-3 py-1 text-xs font-bold capitalize;
+  }
+}
